@@ -1,0 +1,109 @@
+// VARIABLES
+black-color = #393939
+link-color = #93625e
+hover-color = #cf928c
+active-color = #906862
+
+
+// HTML
+// normal
+html
+    font-family "Open Sans"
+    background-image url(/images/beige-background.png)
+    color black-color
+
+// retina
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    html
+        background-image url(/images/beige-background@2x.png)
+        background-size 100px 100px
+
+// phone
+@media (max-width: 767px)
+    html
+        background-image url(/images/silver-background.png)
+
+// phone with retina
+@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px)
+    html
+        background-image url(/images/silver-background@2x.png)
+        background-size 100px 100px
+
+
+// LINKS
+a
+    color link-color
+a:hover
+    color hover-color
+a:active
+    color active-color
+
+
+// HEADER
+.header
+    margin 60px 0
+
+    .header-logo
+        width 440px
+        height 159px
+        margin 0 auto
+
+    .header-contacts
+        width 880px
+        margin -90px auto 0
+        padding 0
+        list-style none
+        font-size 21px
+        font-style italic
+        font-weight 300
+
+        .header-contacts-email
+            float left
+
+            object
+                width 20px
+                height 14px
+                margin-right 7px
+
+        .header-contacts-phone
+            float right
+
+            object
+                position relative
+                top 2px
+                width 20px
+                height 24px
+                margin-right 0px
+
+// tablet and phone
+@media (max-width: 979px)
+    .header
+        margin 30px 0
+
+        .header-logo
+            width 360px
+            height 130px
+
+        .header-contacts
+            width 730px
+            margin-top -75px
+
+            object
+                display none
+
+// phone
+@media (max-width: 767px)
+    .header
+        margin 10px 0
+
+        .header-logo
+            width 300px
+            height 109px
+
+        .header-contacts
+            width 100%
+            margin-top 0
+            font-size 16px
+
+            .header-contacts-email, .header-contacts-phone
+                padding 10px
