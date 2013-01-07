@@ -1,0 +1,64 @@
+.beige-background
+    background-image url("/images/beige-background.png")
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        background-image url("/images/beige-background@2x.png")
+        background-size 100px 100px
+
+.silver-background
+    background-image url("/images/silver-background.png")
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        background-image url("/images/silver-background@2x.png")
+        background-size 100px 100px
+
+.beige-background-on-phone
+    @media (max-width: 767px)
+        background-image url("/images/beige-background.png")
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px)
+        background-image url("/images/beige-background@2x.png")
+        background-size 100px 100px
+
+.silver-background-on-phone
+    @media (max-width: 767px)
+        background-image url("/images/silver-background.png")
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px)
+        background-image url("/images/silver-background@2x.png")
+        background-size 100px 100px
+
+.beige-to-silver-wave
+    background-image url("/images/beige-to-silver-wave.png")
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        background-image url("/images/beige-to-silver-wave@2x.png")
+        background-size 52px 16px
+
+.silver-to-beige-wave
+    background-image url("/images/silver-to-beige-wave.png")
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        background-image url("/images/silver-to-beige-wave@2x.png")
+        background-size 52px 16px
+
+.beige-to-silver-wave-on-phone
+    @media (max-width: 767px)
+        background-image url("/images/small-beige-to-silver-wave.png")
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px)
+        background-image url("/images/small-beige-to-silver-wave@2x.png")
+        background-size 20px 12px
+
+.silver-to-beige-wave-on-phone
+    @media (max-width: 767px)
+        background-image url("/images/small-silver-to-beige-wave.png")
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px)
+        background-image url("/images/small-silver-to-beige-wave@2x.png")
+        background-size 20px 12px
+
+.beige-to-silver-wave, .silver-to-beige-wave, .beige-to-silver-wave-on-phone, .silver-to-beige-wave-on-phone
+    height 16px
+    margin 0
+    border none
+
+.beige-to-silver-wave-on-phone, .silver-to-beige-wave-on-phone
+    @media (max-width: 767px)
+        height 12px
+
+.hide-on-phone
+    @media (max-width: 767px)
+        display none

@@ -1,0 +1,64 @@
+.header
+    padding 60px 0
+    clearfix()
+
+    @media (max-width: 979px)
+        padding 30px 0
+
+    @media (max-width: 767px)
+        padding 10px 0
+
+    .header-logo
+        width 440px
+        height 159px
+        margin 0 auto
+
+        @media (max-width: 979px)
+            width 360px
+            height 130px
+
+        @media (max-width: 767px)
+            width 300px
+            height 109px
+
+    .header-contacts
+        width 880px
+        margin -90px auto 90px
+        padding 0
+        list-style none
+        font-size 21px
+        font-style italic
+        font-weight 300
+
+        @media (max-width: 979px)
+            width 730px
+            margin -75px auto 75px
+
+            object
+                display none
+
+        @media (max-width: 767px)
+            width 300px
+            margin 0 auto
+            font-size 16px
+
+            .header-contacts-email, .header-contacts-phone
+                padding 10px 0
+
+        .header-contacts-email
+            float left
+
+            object
+                width 20px
+                height 14px
+                margin-right 7px
+
+        .header-contacts-phone
+            float right
+
+            object
+                position relative
+                top 2px
+                width 20px
+                height 24px
+                margin-right 0px
