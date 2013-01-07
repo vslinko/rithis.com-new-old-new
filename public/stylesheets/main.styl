@@ -1,3 +1,13 @@
+// MIXINS
+clearfix()
+    zoom 1
+    &:before, &:after
+        content ""
+        display table
+    &:after
+        clear both
+
+
 // VARIABLES
 black-color = #393939
 link-color = #93625e
@@ -6,28 +16,9 @@ active-color = #906862
 
 
 // HTML
-// normal
 html
     font-family "Open Sans"
-    background-image url(/images/beige-background.png)
     color black-color
-
-// retina
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-    html
-        background-image url(/images/beige-background@2x.png)
-        background-size 100px 100px
-
-// phone
-@media (max-width: 767px)
-    html
-        background-image url(/images/silver-background.png)
-
-// phone with retina
-@media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px)
-    html
-        background-image url(/images/silver-background@2x.png)
-        background-size 100px 100px
 
 
 // LINKS
@@ -39,9 +30,85 @@ a:active
     color active-color
 
 
+// BACKGROUNDS
+.beige-background
+    background-image url("/images/beige-background.png")
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        &
+            background-image url("/images/beige-background@2x.png")
+            background-size 100px 100px
+
+.silver-background
+    background-image url("/images/silver-background.png")
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        &
+            background-image url("/images/silver-background@2x.png")
+            background-size 100px 100px
+
+.beige-background-on-phone
+    @media (max-width: 767px)
+        &
+            background-image url("/images/beige-background.png")
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px)
+        &
+            background-image url("/images/beige-background@2x.png")
+            background-size 100px 100px
+
+.silver-background-on-phone
+    @media (max-width: 767px)
+        &
+            background-image url("/images/silver-background.png")
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px)
+        &
+            background-image url("/images/silver-background@2x.png")
+            background-size 100px 100px
+
+.beige-to-silver-wave
+    background-image url("/images/beige-to-silver-wave.png")
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        &
+            background-image url("/images/beige-to-silver-wave@2x.png")
+            background-size 52px 16px
+
+.silver-to-beige-wave
+    background-image url("/images/silver-to-beige-wave.png")
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        &
+            background-image url("/images/silver-to-beige-wave@2x.png")
+            background-size 52px 16px
+
+.beige-to-silver-wave-on-phone
+    @media (max-width: 767px)
+        &
+            background-image url("/images/small-beige-to-silver-wave.png")
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px)
+        &
+            background-image url("/images/small-beige-to-silver-wave@2x.png")
+            background-size 20px 12px
+
+.silver-to-beige-wave-on-phone
+    @media (max-width: 767px)
+        &
+            background-image url("/images/small-silver-to-beige-wave.png")
+    @media (-webkit-min-device-pixel-ratio: 2) and (max-width: 767px), (min-resolution: 192dpi) and (max-width: 767px)
+        &
+            background-image url("/images/small-silver-to-beige-wave@2x.png")
+            background-size 20px 12px
+
+.beige-to-silver-wave, .silver-to-beige-wave, .beige-to-silver-wave-on-phone, .silver-to-beige-wave-on-phone
+    height 16px
+    margin 0
+    border none
+
+.beige-to-silver-wave-on-phone, .silver-to-beige-wave-on-phone
+    @media (max-width: 767px)
+        height 12px
+
+
 // HEADER
 .header
-    margin 60px 0
+    padding 60px 0
+    clearfix()
 
     .header-logo
         width 440px
@@ -50,7 +117,7 @@ a:active
 
     .header-contacts
         width 880px
-        margin -90px auto 0
+        margin -90px auto 90px
         padding 0
         list-style none
         font-size 21px
@@ -78,7 +145,7 @@ a:active
 // tablet and phone
 @media (max-width: 979px)
     .header
-        margin 30px 0
+        padding 30px 0
 
         .header-logo
             width 360px
@@ -86,7 +153,7 @@ a:active
 
         .header-contacts
             width 730px
-            margin-top -75px
+            margin -75px auto 75px
 
             object
                 display none
@@ -94,7 +161,7 @@ a:active
 // phone
 @media (max-width: 767px)
     .header
-        margin 10px 0
+        padding 10px 0
 
         .header-logo
             width 300px
@@ -102,7 +169,7 @@ a:active
 
         .header-contacts
             width 300px
-            margin-top 0
+            margin 0 auto
             font-size 16px
 
             .header-contacts-email, .header-contacts-phone
