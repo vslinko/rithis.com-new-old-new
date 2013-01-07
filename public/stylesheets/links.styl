@@ -1,0 +1,70 @@
+.links
+    width 930px
+    margin 0 auto
+    padding 0
+    list-style none
+    clearfix()
+
+    @media (max-width: 979px)
+        width 750px
+
+    @media (max-width: 767px)
+        width 300px
+
+    .links-item
+        float left
+        margin 70px 0
+        font-size 35px
+
+        @media (max-width: 979px)
+            margin 40px 0
+
+        @media (max-width: 767px)
+            margin 20px 0
+            font-size 16px
+
+            i
+                display none
+
+        i
+            margin-right 10px
+
+    .links-portfolio, .links-vacancies
+        width 465px
+        margin 0
+        text-align center
+        font-size 63px
+
+        @media (max-width: 979px)
+            width 375px
+
+        @media (max-width: 767px)
+            width 150px
+            font-size 24px
+
+        a
+            text-decoration none
+
+            span
+                text-decoration underline
+            
+            i
+                display block
+                margin-left 13px
+
+                &:after
+                    font-size 124px
+
+                    @media (max-width: 767px)
+                        font-size 50px
+
+    .links-freelansim
+        width 35%
+
+    .links-card
+        width 40%
+        text-align center
+
+    .links-github
+        width 25%
+        text-align right

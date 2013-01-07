@@ -73,3 +73,21 @@
 
 .white-circle, .biege-circle
     border-radius 50%
+
+.divider
+    width 815px
+    height 37px
+    margin 50px auto
+    border none
+    background-image url("/images/divider.svg")
+
+    @media (max-width: 979px) and (min-width: 768px)
+        width 742px
+        height 34px
+        background-size 742px 34px
+
+    @media (max-width: 767px)
+        width 100%
+        margin 25px 0
+        background-size 815px 37px
+        background-position center
