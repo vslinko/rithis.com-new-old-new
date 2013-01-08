@@ -14,11 +14,12 @@ html(lang="ru")
 
             ul.header-contacts
                 li.header-contacts-email
-                    object(data="/images/mail-header.svg" type="image/svg+xml")
-                    a(href="mailto:info@rithis.com") info@rithis.com
+                    a(href="mailto:info@rithis.com")
+                        i.icon-email
+                        | info@rithis.com
                 
                 li.header-contacts-phone
-                    object(data="/images/phone-header.svg" type="image/svg+xml")
+                    i.icon-phone
                     | +7 495 660-39-20
 
         hr.beige-to-silver-wave.silver-to-beige-wave-on-phone
@@ -80,3 +81,20 @@ html(lang="ru")
                     a(href="#")
                         i.icon-github
                         span Github
+
+            hr.beige-to-silver-wave.beige-to-silver-wave-on-phone
+
+            .silver-background.footer-contacts
+                .footer-contacts-icon.white-circle.silver-background.hide-on-phone
+                    object(data="/images/contacts.svg" type="image/svg+xml")
+
+                ul.footer-contacts-list
+                    li.footer-contacts-list-email
+                        a(href="mailto:info@rithis.com")
+                            i.icon-email
+                            | info@rithis.com
+                    li.footer-contacts-list-phone
+                        i.icon-phone
+                        | +7 495 660-39-20
+
+                p.copyright &copy; 2013 Студия Ритхис
