@@ -1,13 +1,19 @@
 var express = require('express'),
     stylus = require('stylus'),
+    blade = require('blade'),
     app = express();
 
 
 app.configure(function () {
+    blade.Compiler.doctypes['xhtml'] = blade.Compiler.doctypes['xml'] + blade.Compiler.doctypes['1.1'];
+
     this.set('view engine', 'blade');
     this.set('views', __dirname + '/views');
 
-    this.use(stylus.middleware(__dirname + '/public'));
+    this.use(stylus.middleware({
+        src:__dirname + '/public',
+        compress: process.env.NODE_ENV == 'production'
+    }));
     this.use(express.static(__dirname + '/public'));
 });
 

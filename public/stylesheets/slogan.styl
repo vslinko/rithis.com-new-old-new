@@ -1,10 +1,15 @@
-.slogan .slogan-object
-    width 845px
-    height 404px
-    margin 0 auto
-    padding 80px 0 112px
+.slogan
+    silver-background()
+    clamp-background()
 
-    @media (max-width: 979px)
-        width 743px
-        height 356px
-        padding 45px 0 77px
+    // fix anchor position
+    .slogan-icon
+        display block
+
+    .slogan-divider
+        wave()
+        silver-to-beige-wave()
+
+    // hidden on phone
+    @media (max-width: 767px)
+        display none

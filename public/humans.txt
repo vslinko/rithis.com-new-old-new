@@ -1,0 +1,9 @@
+/* TEAM */
+    Owner: Vyacheslav Slinko
+    Contact: vyacheslav.slinko@rithis.com
+
+
+/* SITE */
+    Language: Russian
+    Doctype: XHTML1.1
+    Tags: xhtml1.1, css3, svg, retina, nodejs, express, blade, stylus

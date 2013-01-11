@@ -1,0 +1,41 @@
+.contacts .contacts-list
+    width 940px
+    margin 0 auto
+    padding 0
+    list-style none
+    font-size 21px
+    font-style italic
+    clearfix()
+
+    // smaller on tablet
+    @media (max-width: 979px)
+        width 750px
+
+    // smallest on phone
+    @media (max-width: 767px)
+        width 300px
+        font-size 16px
+
+    .contacts-list-email
+        float left
+
+        .contacts-list-email-link:before
+            margin-right 5px
+            icon-mail()
+
+            // visible only in browser
+            @media (max-width: 979px)
+                content ""
+
+    .contacts-list-phone
+        float right
+
+        &:before
+            // must be little bit bigger
+            font-size 25px
+
+            icon-phone()
+
+            // visible only in browser
+            @media (max-width: 979px)
+                content ""

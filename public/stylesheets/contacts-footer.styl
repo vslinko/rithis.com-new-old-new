@@ -1,0 +1,29 @@
+.contacts.contacts-footer
+    margin 130px 0 75px
+    @media (max-width: 979px)
+        margin 100px 0 50px
+    @media (max-width: 767px)
+        margin 15px 0 35px
+
+    .contacts-list-email, .contacts-list-phone
+        font 35px "Yeseva One"
+        color #393939
+        
+        // used "a" because iOS replaces phone number by link
+        a { color: #393939 }
+
+        // vertical alignment on phone
+        @media (max-width: 767px)
+            float none
+            text-align center
+            font-size 30px
+
+        // change icons style
+        &:before
+            margin-right 15px
+            font-size 35px
+    
+    // margin under email on phone because vertical alignment
+    .contacts-list-email
+        @media (max-width: 767px)
+            margin-bottom 15px

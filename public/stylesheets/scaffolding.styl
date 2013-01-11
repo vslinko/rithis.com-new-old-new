@@ -1,14 +1,19 @@
 html
-    font-family "Open Sans"
-    font-weight 300
-    color black-color
+    font 300 16px "Open Sans", sans-serif
+    color text
 
-a
-    color link-color
-a:hover
-    color hover-color
-a:active
-    color active-color
+a        { color: link   }
+a:hover  { color: hover  }
+a:active { color: active }
 
-h2
-    font-family "Yeseva One"
+h1, h2, h3, h4, h5, h6
+    font-family "Yeseva One", serif    
+    font-weight normal
+
+selection()
+    background link
+    color beige
+::selection
+    selection()
+::-moz-selection
+    selection()

@@ -1,38 +1,28 @@
 @font-face
-    font-family "rithis"
-    src url("/fonts/rithis/rithis.eot")
-    src url("/fonts/rithis/rithis.eot?#iefix") format("embedded-opentype"),
-        url("/fonts/rithis/rithis.woff") format("woff"),
-        url("/fonts/rithis/rithis.ttf") format("truetype"),
-        url("/fonts/rithis/rithis.svg#rithis") format("svg")
-    font-weight normal
+    font-family "icons"
+    src url("/icons/icons.eot")
+    src url("/icons/icons.eot?#iefix") format("embedded-opentype"),
+        url("/icons/icons.woff") format("woff"),
+        url("/icons/icons.ttf") format("truetype"),
+        url("/icons/icons.svg#rithis") format("svg")
+
+icon(symbol)
+    content symbol
+    display inline-block
+    font-family "icons"
     font-style normal
 
-i[class^=icon]
-    display inline-block
-    
-    &:after
-        font-family "rithis"
-        font-style normal
-        line-height 1
-
-.icon-portfolio:after
-    content "\f0000"
-
-.icon-vacancies:after
-    content "\f0001"
-
-.icon-freelansim:after
-    content "\f0002"
-
-.icon-card:after
-    content "\f0003"
-
-.icon-github:after
-    content "\f0004"
-
-.icon-email:after
-    content "\f0005"
-
-.icon-phone:after
-    content "\f0006"
+icon-mail()
+    icon("\f0000")
+icon-phone()
+    icon("\f0001")
+icon-portfolio()
+    icon("\f0002")
+icon-vacancies()
+    icon("\f0003")
+icon-freelansim()
+    icon("\f0004")
+icon-card()
+    icon("\f0005")
+icon-github()
+    icon("\f0006")

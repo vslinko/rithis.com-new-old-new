@@ -1,70 +1,95 @@
 .links
-    width 930px
-    margin 0 auto
-    padding 0 0 50px
+    width 940px
+    margin 80px auto 100px
+    padding 0
     list-style none
     clearfix()
 
+    .links-item
+        float left
+        font-size 35px
+
+        // first line
+        &.links-item-portfolio, &.links-item-vacancies
+            width 470px
+            margin-bottom 80px
+
+            .links-item-link
+                display block
+
+                // fix vacancies
+                max-width 370px
+
+                margin 0 auto
+                text-align center
+                font-size 63px
+
+                // icons above link
+                &:before
+                    position relative
+                    text-shadow 0 -1px 0 black
+                    font-size 100px
+
+                    @media (max-width: 767px)
+                        font-size 60px
+
+                @media (max-width: 767px)
+                    font-size 24px
+
+            @media (max-width: 979px)
+                width 370px
+                margin-bottom 70px
+
+            @media (max-width: 767px)
+                width 150px
+                margin-bottom 25px
+
+        // second line
+        &.links-item-freelansim, &.links-item-card, &.links-item-github
+            .links-item-link:before
+                margin-right 5px
+
+                // icon visible only in browser
+                @media (max-width: 767px)
+                    content "" !important
+
+        // item-specific styles
+        &.links-item-portfolio .links-item-link:before
+            left 5px
+            icon-portfolio()
+
+        &.links-item-vacancies .links-item-link:before
+            right 3px
+            icon-vacancies()
+
+        &.links-item-freelansim
+            width 35%
+
+            .links-item-link:before
+                icon-freelansim()
+
+        &.links-item-card
+            width 40%
+            text-align center
+
+            .links-item-link:before
+                icon-card()
+
+        &.links-item-github
+            width 25%
+            text-align right
+
+            .links-item-link:before
+                icon-github()
+
+        @media (max-width: 767px)
+            font-size 16px
+
     @media (max-width: 979px)
-        width 750px
+        width 740px
+        margin-top 50px
 
     @media (max-width: 767px)
         width 300px
-
-    .links-item
-        float left
-        margin 70px 0
-        font-size 35px
-
-        @media (max-width: 979px)
-            margin 40px 0
-
-        @media (max-width: 767px)
-            margin 20px 0
-            font-size 16px
-
-            i
-                display none
-
-        i
-            margin-right 10px
-
-    .links-portfolio, .links-vacancies
-        width 465px
-        margin 0
-        text-align center
-        font-size 63px
-
-        @media (max-width: 979px)
-            width 375px
-
-        @media (max-width: 767px)
-            width 150px
-            font-size 24px
-
-        a
-            text-decoration none
-
-            span
-                text-decoration underline
-            
-            i
-                display block
-                margin-left 13px
-
-                &:after
-                    font-size 124px
-
-                    @media (max-width: 767px)
-                        font-size 50px
-
-    .links-freelansim
-        width 35%
-
-    .links-card
-        width 40%
-        text-align center
-
-    .links-github
-        width 25%
-        text-align right
+        margin-top 15px
+        margin-bottom 25px

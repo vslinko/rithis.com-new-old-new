@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 70" preserveAspectRatio="more">
-    <g fill="#F8F1E3" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square">
-        <path d="M20,5 L20,43 L72,43 L72,5 L20,5 Z M20,5"/>
-        <path d="M0,18 L0,56 L52,56 L52,18 L0,18 Z M0,18"/>
-        <path d="M10,32 L10,70 L62,70 L62,32 L10,32 Z M10,32"/>
-    </g>
-    <g fill="#FFFFFF">
-        <path d="M23.9940093,0 L68.0059907,0 C70.2100423,0 72,1.79192185 72,4.00236948 L72,5 L20,5 L20,4.00236948 C20,1.79182182 21.7881789,0 23.9940093,0 Z M23.9940093,0"/>
-        <path d="M3.99400932,13 L48.0059907,13 C50.2100423,13 52,14.7919219 52,17.0023695 L52,18 L0,18 L0,17.0023695 C0,14.7918218 1.78817888,13 3.99400932,13 Z M3.99400932,13"/>
-        <path d="M13.9940093,27 L58.0059907,27 C60.2100423,27 62,28.7919219 62,31.0023695 L62,32 L10,32 L10,31.0023695 C10,28.7918218 11.7881789,27 13.9940093,27 Z M13.9940093,27"/>
-        <path d="M17.1372549,39 L17.1372549,49 L54.8627451,49 L54.8627451,39 L17.1372549,39 Z M17.1372549,39"/>
-        <path d="M17.1372549,53 L17.1372549,63 L30.3921569,63 L30.3921569,53 L17.1372549,53 Z M17.1372549,53"/>
-        <path d="M35.4901961,53 L35.4901961,55 L54.8627451,55 L54.8627451,53 L35.4901961,53 Z M35.4901961,53"/>
-        <path d="M35.4901961,57 L35.4901961,59 L54.8627451,59 L54.8627451,57 L35.4901961,57 Z M35.4901961,57"/>
-        <path d="M35.4901961,61 L35.4901961,63 L54.8627451,63 L54.8627451,61 L35.4901961,61 Z M35.4901961,61"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000">
+    <defs>
+        <g id="browser">
+            <rect x="10" y="70" width="722" height="540" fill="#F8F1E3" stroke="white" stroke-width="20"/>
+            <path d="M55,0 L685,0 C717,0 742,24 742,57 L742,71 L0,71 L0,57 C0,24 24,0 55,0 Z M55,0" fill="white"/>
+        </g>
+    </defs>
+    <use xlink:href="#browser" transform="translate(257)"/>
+    <use xlink:href="#browser" transform="translate(0, 185)"/>
+    <use xlink:href="#browser" transform="translate(145, 385)"/>
+    <g fill="white">
+        <rect x="240" y="570" width="540" height="130"/>
+        <rect x="240" y="750" width="215" height="130"/>
+        <rect x="500" y="750" width="280" height="30"/>
+        <rect x="500" y="800" width="280" height="30"/>
+        <rect x="500" y="850" width="280" height="30"/>
     </g>
 </svg>

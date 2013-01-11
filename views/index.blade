@@ -1,100 +1,67 @@
-doctype html
-html(lang="ru")
+doctype xhtml
+html(xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd")
     head
         title Студия Ритхис
         meta(name="viewport" content="width=device-width")
-        link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Yeseva+One&subset=cyrillic")
-        link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic&subset=cyrillic")
+        link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Yeseva+One&subset=latin,cyrillic")
+        link(rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic&subset=latin,cyrillic")
         link(rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css")
         link(rel="stylesheet" href="/stylesheets/main.css")
+        link(rel="icon" href="/favicon.ico" type="image/x-icon")
+        script(type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js")
     body
-        .header.beige-background.silver-background-on-phone
-            .header-logo
-                object(data="/images/logo.svg" type="image/svg+xml")
+        .header
+            h1.logo Студия Ритхис
 
-            ul.header-contacts
-                li.header-contacts-email
-                    a(href="mailto:info@rithis.com")
-                        i.icon-email
-                        | info@rithis.com
-                
-                li.header-contacts-phone
-                    i.icon-phone
-                    | +7 495 660-39-20
+            .contacts.contacts-header
+                ul.contacts-list
+                    li.contacts-list-email
+                        a.contacts-list-email-link(href="mailto:info@rithis.com") info@rithis.com
+                    li.contacts-list-phone +7 495 660-39-20
 
-        hr.beige-to-silver-wave.silver-to-beige-wave-on-phone
+            hr.header-divider
 
-        .slogan.silver-background.hide-on-phone
-            .slogan-object
-                object(data="/images/slogan.svg" type="image/svg+xml")
+        .slogan
+            a#slogan.slogan-icon
+            p.slogan-text Разработаем ваш проект качественно и в срок
+            hr.slogan-divider
 
-        hr.silver-to-beige-wave.hide-on-phone
-
-        .beige-background
+        .content
             .latest-works
-                .latest-works-icon.white-circle.beige-background.hide-on-phone
-                    object(data="/images/latest-works.svg" type="image/svg+xml")
+                a#latest-works.latest-works-icon
+                h2.latest-works-title Последние работы
 
-                .latest-works-title
-                    h2.beige-background Последние работы
+                .latest-works-scroll
+                    ul.latest-works-scroll-list
+                        - for (var i = 1; i <= 3; i++)
+                            li.latest-works-scroll-list-item
+                                a.latest-works-scroll-list-item-link(href="#")
+                                    img.latest-works-scroll-list-item-link-image(src="http://lorempixel.com/235/235/technics/#{i}/" alt="Работа №#{i}")
+                                h3.latest-works-scroll-list-item-title
+                                    a.latest-works-scroll-list-item-title-link(href="#") Работа №#{i}
 
-                .latest-works-wrapper
-                    ul.latest-works-list
-                        li.latest-works-list-item
-                            a.latest-works-list-item-object.biege-circle(href="#")
-                                img(src="http://lorempixel.com/235/235/abstract/1/")
-                            h3.latest-works-list-item-title
-                                a(href="#") Работа №1
-                        
-                        li.latest-works-list-item
-                            a.latest-works-list-item-object.biege-circle(href="#")
-                                img(src="http://lorempixel.com/235/235/abstract/2/")
-                            h3.latest-works-list-item-title
-                                a(href="#") Работа №2
-                        
-                        li.latest-works-list-item
-                            a.latest-works-list-item-object.biege-circle(href="#")
-                                img(src="http://lorempixel.com/235/235/abstract/3/")
-                            h3.latest-works-list-item-title
-                                a(href="#") Работа №3
-
-            hr.divider
+                hr.latest-works-divider
 
             ul.links
-                li.links-item.links-portfolio
-                    a(href="#")
-                        i.icon-portfolio
-                        span Портфолио
-                li.links-item.links-vacancies
-                    a(href="#")
-                        i.icon-vacancies
-                        span Вакансии
-                li.links-item.links-freelansim
-                    a(href="#")
-                        i.icon-freelansim
-                        span Фрилансим
-                li.links-item.links-card
-                    a(href="#")
-                        i.icon-card
-                        span Реквизитка
-                li.links-item.links-github
-                    a(href="#")
-                        i.icon-github
-                        span Github
+                li.links-item.links-item-portfolio
+                    a.links-item-link(href="#") Портфолио
+                li.links-item.links-item-vacancies
+                    a.links-item-link(href="#") Вакансии
+                li.links-item.links-item-freelansim
+                    a.links-item-link(href="#") Фрилансим
+                li.links-item.links-item-card
+                    a.links-item-link(href="#") Реквизитка
+                li.links-item.links-item-github
+                    a.links-item-link(href="#") Github
 
-            hr.beige-to-silver-wave.beige-to-silver-wave-on-phone
+            hr.content-divider
 
-            .silver-background.footer-contacts
-                .footer-contacts-icon.white-circle.silver-background.hide-on-phone
-                    object(data="/images/contacts.svg" type="image/svg+xml")
+        .footer
+            .contacts.contacts-footer
+                a#contacts.contacts-icon
+                ul.contacts-list
+                    li.contacts-list-email
+                        a.contacts-list-email-link(href="mailto:info@rithis.com") info@rithis.com
+                    li.contacts-list-phone +7 495 660-39-20
 
-                ul.footer-contacts-list
-                    li.footer-contacts-list-email
-                        a(href="mailto:info@rithis.com")
-                            i.icon-email
-                            | info@rithis.com
-                    li.footer-contacts-list-phone
-                        i.icon-phone
-                        | +7 495 660-39-20
-
-                p.copyright &copy; 2013 Студия Ритхис
+            p.copyrights © 2012 Студия Ритхис

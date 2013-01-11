@@ -1,0 +1,7 @@
+#!/usr/bin/env fontforge
+directory = $0:h + "/../public/icons/"
+Open(directory + "source.svg")
+Generate(directory + "icons.svg")
+Generate(directory + "icons.ttf")
+Generate(directory + "icons.eot")
+Generate(directory + "icons.woff")

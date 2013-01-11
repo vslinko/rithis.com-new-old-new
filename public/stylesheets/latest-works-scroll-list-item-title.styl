@@ -1,0 +1,63 @@
+.latest-works .latest-works-scroll .latest-works-scroll-list \
+        .latest-works-scroll-list-item .latest-works-scroll-list-item-title
+    // move over image
+    position absolute
+    width 240px
+    height 240px
+    margin -245px 5px 5px
+
+    .latest-works-scroll-list-item-title-link
+        // hide by default
+        display none
+
+        border-radius 50%
+        background white
+        opacity .8
+        line-height 240px
+        text-align center
+        text-decoration none
+        text-shadow 1px 1px 1px white
+        font-family "Open Sans"
+        font-weight 300
+        color black
+
+        // brackets around title
+        &:before, &:after
+            position relative
+            top 2px
+            text-shadow 1px 1px 1px white
+            font-size 30px
+
+        &:before
+            content "{"
+            margin-right 5px
+
+        &:after
+            content "}"
+            margin-left 5px
+
+        // better opacity if rgba is supported
+        .rgba &
+            opacity 1
+            background rgba(255, 255, 255, .8)
+
+    // show title on hover
+    &:hover .latest-works-scroll-list-item-title-link
+        display block
+
+    // reset hover behaviour on tablets and phones
+    @media (max-width: 979px)
+        position static
+        width auto
+        height auto
+        margin 20px 0 0
+
+        .latest-works-scroll-list-item-title-link, .rgba & .latest-works-scroll-list-item-title-link
+            display block
+            background none
+            opacity 1
+            line-height 1
+            text-shadow none
+
+            &:before, &:after
+                content ""

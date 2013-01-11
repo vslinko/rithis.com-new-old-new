@@ -8,6 +8,123 @@ clearfix()
     &:after
         clear both
 
+// prevents the margins to collapse
+clamp-background()
+    overflow auto
+
+// hide text in element
+hide-text()
+    text-indent -9999px
+    white-space nowrap
+
 box-shadow()
     -webkit-box-shadow arguments
     box-shadow arguments
+
+// wave divider helper
+wave()
+    height 16px
+    margin 0
+    border none
+
+    @media (max-width: 767px)
+        height 12px
+
+// circle icon on wave helper
+icon-on-wave(top, top-tablet, image, size, background)
+    display block
+    position absolute
+    left 50%
+    width 128px
+    height 128px
+    margin-top top
+    margin-left -64px
+    border-radius 50%
+    retina-background-image(image)
+
+    // use vector icon in supported browsers
+    .multiplebgs.backgroundsize.svg &
+        background-image url("/images/" + image + ".svg"), url("/images/" + background + "-background.png")
+        background-size size size, 100px 100px
+        background-repeat no-repeat, repeat
+        background-position 50%
+
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+            background-image url("/images/" + image ".svg"), url("/images/" + background + "-background@2x.png")
+
+    @media (max-width: 979px)
+        margin-top top-tablet
+
+    @media (max-width: 767px)
+        display none
+
+// try to use vertor background in supported browsers
+svg-background-image(name)
+    .backgroundsize.svg &
+        background-image url("/images/" + name + ".svg") !important
+        background-size 100%
+
+// extracted from svg-background-image to fix @media inheritance
+svg-background-image-tablet(name)
+    @media (max-width: 979px)
+        svg-background-image(name)
+
+svg-background-image-phone(name)
+    @media (max-width: 767px)
+        svg-background-image(name)
+
+// use retina images on supported devices
+retina-background-image(name, width = false, height = false)
+    background-image url("/images/" + name + ".png")
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+        .backgroundsize &
+            background-image url("/images/" + name + "@2x.png")
+            if width and height
+                background-size width height
+            else
+                background-size cover
+
+// extracted from retina-background-image to fix @media inheritance
+retina-background-image-tablet(name, width = false, height = false)
+    @media (max-width: 979px)
+        background-image url("/images/" + name + ".png")
+
+    @media (max-width: 979px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 979px) and (min-resolution: 192dpi)
+        .backgroundsize &
+            background-image url("/images/" + name + "@2x.png")
+            if width and height
+                background-size width height
+            else
+                background-size cover
+
+retina-background-image-phone(name, width = false, height = false)
+    @media (max-width: 767px)
+        background-image url("/images/" + name + ".png")
+
+    @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 192dpi)
+        .backgroundsize &
+            background-image url("/images/" + name + "@2x.png")
+            if width and height
+                background-size width height
+            else
+                background-size cover
+
+// some predefines
+beige-background()
+    retina-background-image("beige-background", 100px, 100px)
+
+silver-background()
+    retina-background-image("silver-background", 100px, 100px)
+
+beige-to-silver-wave()
+    retina-background-image("beige-to-silver-wave", 52px, 16px)
+
+silver-to-beige-wave()
+    retina-background-image("silver-to-beige-wave", 52px, 16px)
+
+beige-to-silver-wave-phone()
+    retina-background-image-phone("beige-to-silver-wave-phone", 20px, 12px)
+
+silver-to-beige-wave-phone()
+    retina-background-image-phone("silver-to-beige-wave-phone", 20px, 12px)

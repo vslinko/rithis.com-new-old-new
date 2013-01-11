@@ -1,0 +1,22 @@
+.latest-works .latest-works-scroll
+    .latest-works-scroll-list
+        width 850px
+        margin 65px auto
+        padding 0
+        list-style none
+        clearfix()
+
+        @media (max-width: 979px)
+            width 740px
+            margin-top 55px
+
+        @media (max-width: 767px)
+            width 700px
+            margin 0 auto
+
+    // make list scrollable if it does not fit to screen
+    @media (max-width: 767px)
+        width 100%
+        margin 20px 0
+        overflow-x scroll
+        overflow-y hidden
