@@ -2,11 +2,11 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg>
 <metadata>
-Created by FontForge 20120731 at Fri Jan 11 17:03:17 2013
+Created by FontForge 20120731 at Sat Jan 12 22:10:03 2013
  By Vyacheslav Slinko
 </metadata>
 <defs>
-<font id="icons" horiz-adv-x="1000" >
+<font id="icons" horiz-adv-x="1070" >
   <font-face 
     font-family="icons"
     font-weight="400"
@@ -22,7 +22,7 @@ Created by FontForge 20120731 at Fri Jan 11 17:03:17 2013
   />
     <missing-glyph />
     <glyph glyph-name="Mail" unicode="&#xf0000;" 
-d="M999 750l-500 -349l-499 349h999zM0 647l289 -206l-289 -307v513zM999 134l-293 307l293 206v-513zM543 331l116 80l340 -360h-999l336 360l117 -80l46 -34zM543 331z" />
+d="M1070 699l-536 -374l-534 374h1070zM0 589l309 -221l-309 -329v550zM1070 39l-314 329l314 221v-550zM581 250l125 86l364 -386h-1070l359 386l126 -86l49 -36zM581 250z" />
     <glyph glyph-name="Phone" unicode="&#xf0001;" horiz-adv-x="705" 
 d="M163 499l13 16l132 187c147 207 398 24 398 24l-177 -253s-78 67 -152 55c-35 -5 -103 -103 -94 -88l3 7l-3 -9s-58 -80 -53 -111c16 -79 105 -125 105 -125l-178 -253s-261 168 -114 382l120 168v0v0z" />
     <glyph glyph-name="Portfolio" unicode="&#xf0002;" horiz-adv-x="1407" 

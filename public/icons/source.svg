@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg">
     <defs>
-        <font id="icons" horiz-adv-x="1000">
+        <font id="icons">
             <font-face units-per-em="1000" ascent="700" descent="-250"/>
-            <glyph glyph-name="Mail" unicode="&#xf0000;">
-                <path d="M999,50 L499,399 L0,50 Z M0,153 L289,359 L0,666 Z M999,666 L706,359 L999,153 Z M543,469 L659,389 L999,749 L0,749 L336,389 L453,469 L499,503 Z M543,469"/>
+            <glyph glyph-name="Mail" unicode="&#xf0000;" horiz-adv-x="1070">
+                <path d="M1070,101 L534,475 L0,101 Z M0,211 L309,432 L0,761 Z M1070,761 L756,432 L1070,211 Z M581,550 L706,464 L1070,850 L0,850 L359,464 L485,550 L534,586 Z M581,550"/>
             </glyph>
             <glyph glyph-name="Phone" unicode="&#xf0001;" horiz-adv-x="705">
                 <path d="M163,301 L176,285 L308,98 C455,-109 706,74 706,74 L529,327 C529,327 451,260 377,272 C342,277 274,375 283,360 L286,353 L283,362 C283,362 225,442 230,473 C246,552 335,598 335,598 L157,851 C157,851 -104,683 43,469 L163,301 L163,301 L163,301"/>
