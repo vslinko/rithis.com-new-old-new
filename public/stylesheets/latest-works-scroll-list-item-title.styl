@@ -2,15 +2,13 @@
         .latest-works-scroll-list-item .latest-works-scroll-list-item-title
     // move over image
     responsive position absolute static
-    responsive width 240px auto
-    responsive height 240px auto
-    responsive margin, -245px 5px 5px, 20px 0 0
+    responsive square 240px auto
+    responsive margin, -245px 5px 5px, 10px 0 0, 5px 0 0
 
     .latest-works-scroll-list-item-title-link
         // hide by default
         responsive display none block
 
-        border-radius 50%
         responsive background white none
         responsive opacity .8 1
         responsive line-height 240px 1
@@ -18,8 +16,10 @@
         text-decoration none
         responsive text-shadow, 1px 1px 1px white, none
         font-family "Open Sans"
+        responsive font-size 20px 18px 16px
         font-weight 300
         color black
+        circle()
 
         // brackets around title
         &:before, &:after

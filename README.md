@@ -35,6 +35,7 @@ border-radius
 image
 svg
 background
+background-repeat
 background-position
 background-size
 opacity

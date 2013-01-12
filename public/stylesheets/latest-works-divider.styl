@@ -1,6 +1,6 @@
 .latest-works .latest-works-divider
-    responsive width 815px 740px auto
-    responsive height 40px 36px 40px
+    responsive width 850px 740px auto
+    responsive height 47px 36px 45px
 
     // reset hr style
     border none
@@ -8,9 +8,13 @@
     responsive image "latest-works-divider" "latest-works-divider-tablet" \
         "latest-works-divider"
     svg "latest-works-divider"
+
+    // fix svg height
+    background-repeat no-repeat
+
     phone background-position center
 
     // wider than screen on phone
     @media (max-width: 767px)
         .backgroundsize.svg &
-            background-size 815px 40px
+            background-size 815px 45px

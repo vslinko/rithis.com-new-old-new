@@ -1,7 +1,7 @@
 .contacts.contacts-footer
-    responsive margin, 130px 0 75px, \
-                       100px 0 50px, \
-                       15px 0 35px
+    responsive margin, 80px 0 60px, \
+                       70px 0 50px, \
+                       30px 0 20px
 
     .contacts-list-email, .contacts-list-phone
         // vertical alignment on phone
@@ -9,18 +9,18 @@
         phone text-align center
 
         font-family "Yeseva One"
-        font-style normal
         responsive font-size 35px same 30px
-        color #393939
+        font-style normal
+        color text
 
         // used "a" because iOS replaces phone number by link
-        a { color: #393939 }
+        a { color: text }
 
         // change icons style
         &:before
-            margin-right 15px
+            responsive margin-right 15px 0
             font-size 35px
     
     // margin under email on phone because vertical alignment
     .contacts-list-email
-        phone margin-bottom 15px
+        phone margin-bottom 10px
