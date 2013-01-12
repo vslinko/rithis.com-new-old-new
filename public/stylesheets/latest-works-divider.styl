@@ -1,24 +1,16 @@
 .latest-works .latest-works-divider
-    width 815px
-    height 40px
+    responsive width 815px 740px auto
+    responsive height 40px 36px 40px
 
     // reset hr style
     border none
-    
-    retina-background-image("latest-works-divider")
-    retina-background-image-tablet("latest-works-divider-tablet")
-    retina-background-image-phone("latest-works-divider")
-    svg-background-image("latest-works-divider")
 
-    @media (max-width: 979px)
-        width 740px
-        height 36px
+    responsive image "latest-works-divider" "latest-works-divider-tablet" \
+        "latest-works-divider"
+    svg "latest-works-divider"
+    phone background-position center
 
     // wider than screen on phone
     @media (max-width: 767px)
-        width auto
-        height 40px
-        background-position center
-
         .backgroundsize.svg &
             background-size 815px 40px

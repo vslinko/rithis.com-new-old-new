@@ -32,6 +32,8 @@ overflow-x
 overflow-y
 border
 border-radius
+image
+svg
 background
 background-position
 background-size

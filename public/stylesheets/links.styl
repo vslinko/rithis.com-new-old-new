@@ -1,18 +1,20 @@
 .links
-    width 940px
-    margin 80px auto 100px
+    responsive width 940px 740px 300px
+    responsive margin, 80px auto 100px, \
+                       50px auto 100px, \
+                       15px auto 25px
     padding 0
     list-style none
     clearfix()
 
     .links-item
         float left
-        font-size 35px
+        responsive font-size 35px same 16px
 
         // first line
         &.links-item-portfolio, &.links-item-vacancies
-            width 470px
-            margin-bottom 80px
+            responsive width 470px 370px 150px
+            responsive margin-bottom 80px 70px 25px
 
             .links-item-link
                 display block
@@ -22,36 +24,21 @@
 
                 margin 0 auto
                 text-align center
-                font-size 63px
+                responsive font-size 63px same 24px
 
                 // icons above link
                 &:before
                     position relative
                     text-shadow 0 -1px 0 black
-                    font-size 100px
-
-                    @media (max-width: 767px)
-                        font-size 60px
-
-                @media (max-width: 767px)
-                    font-size 24px
-
-            @media (max-width: 979px)
-                width 370px
-                margin-bottom 70px
-
-            @media (max-width: 767px)
-                width 150px
-                margin-bottom 25px
+                    responsive font-size 100px same 60px
 
         // second line
         &.links-item-freelansim, &.links-item-card, &.links-item-github
             .links-item-link:before
                 margin-right 5px
 
-                // icon visible only in browser
                 @media (max-width: 767px)
-                    content "" !important
+                    hide-icon()
 
         // item-specific styles
         &.links-item-portfolio .links-item-link:before
@@ -81,15 +68,3 @@
 
             .links-item-link:before
                 icon-github()
-
-        @media (max-width: 767px)
-            font-size 16px
-
-    @media (max-width: 979px)
-        width 740px
-        margin-top 50px
-
-    @media (max-width: 767px)
-        width 300px
-        margin-top 15px
-        margin-bottom 25px

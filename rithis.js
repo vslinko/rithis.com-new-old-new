@@ -1,6 +1,7 @@
 var express = require('express'),
     stylus = require('stylus'),
     blade = require('blade'),
+    nib = require('nib'),
     app = express();
 
 
@@ -12,7 +13,13 @@ app.configure(function () {
 
     this.use(stylus.middleware({
         src:__dirname + '/public',
-        compress: process.env.NODE_ENV == 'production'
+        compile: function (str, path) {
+            return stylus(str)
+                .set('filename', path)
+                .set('compress', process.env.NODE_ENV == 'production')
+                .use(nib())
+                .import('nib');
+        }
     }));
     this.use(express.static(__dirname + '/public'));
 });

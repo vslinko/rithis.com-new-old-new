@@ -1,22 +1,22 @@
 .latest-works .latest-works-scroll .latest-works-scroll-list \
         .latest-works-scroll-list-item .latest-works-scroll-list-item-title
     // move over image
-    position absolute
-    width 240px
-    height 240px
-    margin -245px 5px 5px
+    responsive position absolute static
+    responsive width 240px auto
+    responsive height 240px auto
+    responsive margin, -245px 5px 5px, 20px 0 0
 
     .latest-works-scroll-list-item-title-link
         // hide by default
-        display none
+        responsive display none block
 
         border-radius 50%
-        background white
-        opacity .8
-        line-height 240px
+        responsive background white none
+        responsive opacity .8 1
+        responsive line-height 240px 1
         text-align center
         text-decoration none
-        text-shadow 1px 1px 1px white
+        responsive text-shadow, 1px 1px 1px white, none
         font-family "Open Sans"
         font-weight 300
         color black
@@ -29,35 +29,18 @@
             font-size 30px
 
         &:before
-            content "{"
+            responsive content "{" ""
             margin-right 5px
 
         &:after
-            content "}"
+            responsive content "}" ""
             margin-left 5px
 
         // better opacity if rgba is supported
         .rgba &
             opacity 1
-            background rgba(255, 255, 255, .8)
+            responsive background rgba(255, 255, 255, .8) none
 
     // show title on hover
     &:hover .latest-works-scroll-list-item-title-link
         display block
-
-    // reset hover behaviour on tablets and phones
-    @media (max-width: 979px)
-        position static
-        width auto
-        height auto
-        margin 20px 0 0
-
-        .latest-works-scroll-list-item-title-link, .rgba & .latest-works-scroll-list-item-title-link
-            display block
-            background none
-            opacity 1
-            line-height 1
-            text-shadow none
-
-            &:before, &:after
-                content ""

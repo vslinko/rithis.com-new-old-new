@@ -1,18 +1,10 @@
 .contacts.contacts-header .contacts-list
     // move to one line with logo
-    position absolute
-    top 135px
+    responsive position absolute same static
+    responsive top 135px 80px
 
     // centrify
     left 50%
-    margin 0 0 0 -470px
-
-    // smaller on tablet
-    @media (max-width: 979px)
-        top 80px
-        margin-left -375px
-
-    // move under logo on phone
-    @media (max-width: 767px)
-        position static
-        margin 15px auto
+    responsive margin, 0 0 0 -470px, \
+                       0 0 0 -375px, \
+                       15px auto

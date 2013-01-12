@@ -1,0 +1,29 @@
+-image(name)
+    background-image url("/images/" + name + ".png")
+
+-image-2x(name)
+    size = image-size("../images/" + name + ".png")
+
+    .backgroundsize &
+        background-image url("/images/" + name + "@2x.png")
+        background-size size[0] size[1]
+
+-image-browser(name)
+    -image name
+    @media all and (-webkit-min-device-pixel-ratio: 1.5)
+        -image-2x name
+
+-image-tablet(name)
+    @media all and (max-width: 979px)
+        -image name
+    @media all and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 979px)
+        -image-2x name
+
+-image-phone(name)
+    @media all and (max-width: 767px)
+        -image name
+    @media all and (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 767px)
+        -image-2x name
+
+image(name)
+    -image name

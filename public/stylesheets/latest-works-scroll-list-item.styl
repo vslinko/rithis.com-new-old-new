@@ -1,20 +1,16 @@
 .latest-works .latest-works-scroll .latest-works-scroll-list \
         .latest-works-scroll-list-item
     float left
-    margin-left 50px
+    responsive margin-left 50px 25px
 
     &:first-child
         margin-left 0
-    
-    @media (max-width: 979px)
-        margin-left 25px
-    
+
+    // right margin on item doesn't work
+    // and padding on parent element doesn't work, so
     @media (max-width: 767px)
-        // padding on parent element doesn't work, so
         &:first-child
             padding-left 70px
-
-        // right margin on item doesn't work too, so
         &:last-child
             padding-right 70px
 
@@ -45,14 +41,6 @@
 
         .latest-works-scroll-list-item-link-image
             display block
-            width 240px
-            height 240px
+            responsive width 240px 220px 160px
+            responsive height 240px 220px 160px
             border-radius 50%
-
-            @media (max-width: 979px)
-                width 220px
-                height 220px
-
-            @media (max-width: 767px)
-                width 160px
-                height 160px

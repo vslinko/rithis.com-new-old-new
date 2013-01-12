@@ -1,13 +1,7 @@
 .header
-    beige-background()
-    clamp-background()
-
-    // reverse on phone
-    retina-background-image-phone("silver-background", 100px, 100px)
+    overflow auto
+    responsive image "beige-background" same "silver-background"
 
     .header-divider
+        responsive image "beige-to-silver-wave" same "silver-to-beige-wave-phone"
         wave()
-        beige-to-silver-wave()
-
-        // reverse on phone
-        silver-to-beige-wave-phone()
