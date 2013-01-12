@@ -1,5 +1,12 @@
 <?xml version="1.0"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="8">
+    <style type="text/css">
+        <![CDATA[
+            line {
+                shape-rendering: crispEdges;
+            }
+        ]]>
+    </style>
     <defs>
         <g id="row" fill="#494949">
             <circle cx="4" cy="4" r="4"/>
