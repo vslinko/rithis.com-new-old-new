@@ -1,14 +1,11 @@
 var express = require('express'),
     stylus = require('stylus'),
-    blade = require('blade'),
     nib = require('nib'),
     app = express();
 
 
 app.configure(function () {
-    blade.Compiler.doctypes['xhtml'] = blade.Compiler.doctypes['xml'] + blade.Compiler.doctypes['1.1'];
-
-    this.set('view engine', 'blade');
+    this.set('view engine', 'jade');
     this.set('views', __dirname + '/views');
 
     this.use(stylus.middleware({
