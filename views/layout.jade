@@ -1,5 +1,5 @@
 mixin contacts(modifier, badge)
-    div(class="contacts contacts-" + modifier)
+    div(class="contacts contacts-#{modifier}")
         if badge
             a#contacts.contacts-badge
         ul.contacts-list
