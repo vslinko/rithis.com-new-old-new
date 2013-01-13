@@ -1,3 +1,12 @@
+mixin contacts(modifier, badge)
+    div(class="contacts contacts-" + modifier)
+        if badge
+            a#contacts.contacts-badge
+        ul.contacts-list
+            li.contacts-list-email
+                a.contacts-list-email-link(href="mailto:info@rithis.com") info@rithis.com
+            li.contacts-list-phone +7 495 660-39-20
+
 doctype xml
 doctype 1.1
 html(xmlns="http://www.w3.org/1999/xhtml", xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance", xsi:schemaLocation="http://www.w3.org/1999/xhtml http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd")
@@ -12,13 +21,7 @@ html(xmlns="http://www.w3.org/1999/xhtml", xmlns:xsi="http://www.w3.org/2001/XML
     body
         .header
             h1.logo Студия Ритхис
-
-            .contacts.contacts-header
-                ul.contacts-list
-                    li.contacts-list-email
-                        a.contacts-list-email-link(href="mailto:info@rithis.com") info@rithis.com
-                    li.contacts-list-phone +7 495 660-39-20
-
+            mixin contacts("header")
             hr.header-divider
 
         block body
@@ -27,11 +30,5 @@ html(xmlns="http://www.w3.org/1999/xhtml", xmlns:xsi="http://www.w3.org/2001/XML
                 hr.content-divider
 
         .footer
-            .contacts.contacts-footer
-                a#contacts.contacts-badge
-                ul.contacts-list
-                    li.contacts-list-email
-                        a.contacts-list-email-link(href="mailto:info@rithis.com") info@rithis.com
-                    li.contacts-list-phone +7 495 660-39-20
-
+            mixin contacts("footer", true)
             p.copyrights © 2012 Студия Ритхис
