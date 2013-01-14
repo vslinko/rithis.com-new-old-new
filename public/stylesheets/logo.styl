@@ -1,9 +1,14 @@
 .logo
-    responsive width 500px 360px 300px
-    responsive height 170px 122px 102px
-    responsive margin, 50px auto 70px, \
-                       40px auto 50px, \
-                       20px auto 10px
+    // fixed z-index
+    position relative
+    z-index logo-index
+
+    display block
+    responsive width 360px 300px 200px
+    responsive height 122px 102px 68px
+    responsive margin, 50px auto 30px, \
+                       same, \
+                       15px auto 20px
     responsive image "logo" "logo-tablet" "logo-phone"
     svg "logo"
     hide-text()

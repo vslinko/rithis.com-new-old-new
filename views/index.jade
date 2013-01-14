@@ -3,6 +3,12 @@ extends layout
 block title
     title Студия Ритхис
 
+block header
+    .header.header-index
+        h1.logo.logo-index Студия Ритхис
+        mixin contacts("contacts-header contacts-index")
+        hr.header-divider
+
 prepend body
     .slogan
         a#slogan.slogan-badge
@@ -27,7 +33,7 @@ block content
 
     ul.links
         li.links-item.links-item-portfolio
-            a.links-item-link(href="#") Портфолио
+            a.links-item-link(href="/portfolio/") Портфолио
         li.links-item.links-item-vacancies
             a.links-item-link(href="#") Вакансии
         li.links-item.links-item-freelansim

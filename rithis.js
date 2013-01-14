@@ -28,5 +28,11 @@ app.get('/', function (req, res) {
     });
 });
 
+app.get('/portfolio/', function (req, res) {
+    res.render('portfolio', function (err, html) {
+        res.send(err ? 500 : html);
+    });
+});
+
 
 app.listen(process.env.VCAP_APP_PORT || 3000);

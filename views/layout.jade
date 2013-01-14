@@ -1,5 +1,5 @@
 mixin contacts(modifier, badge)
-    div(class="contacts contacts-#{modifier}")
+    div(class="contacts #{modifier}")
         if badge
             a#contacts.contacts-badge
         ul.contacts-list
@@ -19,10 +19,11 @@ html(xmlns="http://www.w3.org/1999/xhtml", xmlns:xsi="http://www.w3.org/2001/XML
         link(rel="stylesheet", href="/stylesheets/main.css")
         script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js")
     body
-        .header
-            h1.logo Студия Ритхис
-            mixin contacts("header")
-            hr.header-divider
+        block header
+            .header
+                a.logo(href="/") Студия Ритхис
+                mixin contacts("contacts-header")
+                hr.header-divider
 
         block body
             .content
@@ -30,5 +31,5 @@ html(xmlns="http://www.w3.org/1999/xhtml", xmlns:xsi="http://www.w3.org/2001/XML
                 hr.content-divider
 
         .footer
-            mixin contacts("footer", true)
+            mixin contacts("contacts-footer", true)
             p.copyrights © 2012—2013 Студия Ритхис

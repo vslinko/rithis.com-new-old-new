@@ -5,6 +5,7 @@
 ```
 content
 position
+z-index
 top
 right
 bottom
