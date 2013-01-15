@@ -9,4 +9,14 @@ prepend content
             a.hot-links-item-link(href="#") Вакансии
 
 block content
-    div(style="height: 300px")
+    .portfolio
+        h1.portfolio-title Портфолио
+
+        .portfolio-scroll
+            ul.portfolio-scroll-list
+                - for (var i = 1; i <= 3; i++)
+                    li.portfolio-scroll-list-item
+                        a.portfolio-scroll-list-item-link(href="#")
+                            img.portfolio-scroll-list-item-link-image(src="http://lorempixel.com/235/235/technics/#{i}/", alt="Работа №#{i}")
+                        h2.portfolio-scroll-list-item-title
+                            a.portfolio-scroll-list-item-title-link(href="#") Работа №#{i}

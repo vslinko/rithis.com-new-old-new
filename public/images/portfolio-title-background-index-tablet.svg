@@ -11,10 +11,7 @@
         <g id="row" fill="#494949">
             <circle cx="7" cy="7" r="7"/>
             <circle cx="25" cy="7" r="4"/>
-            <g stroke="#494949">
-                <line x1="25" y1="7" x2="190" y2="7" stroke-width="3"/>
-                <line x1="30" y1="11" x2="190" y2="11" stroke-width="1"/>
-            </g>
+            <line x1="25" y1="7" x2="90" y2="7" stroke="#494949" stroke-width="2.5"/>
         </g>
     </defs>
     <g>

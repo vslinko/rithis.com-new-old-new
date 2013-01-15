@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="740" height="14">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="850" height="14">
     <style type="text/css">
         <![CDATA[
             line {
@@ -11,14 +11,11 @@
         <g id="row" fill="#494949">
             <circle cx="7" cy="7" r="7"/>
             <circle cx="25" cy="7" r="4"/>
-            <g stroke="#494949">
-                <line x1="25" y1="7" x2="190" y2="7" stroke-width="3"/>
-                <line x1="30" y1="11" x2="190" y2="11" stroke-width="1"/>
-            </g>
+            <line x1="25" y1="7" x2="140" y2="7" stroke="#494949" stroke-width="2.5"/>
         </g>
     </defs>
     <g>
         <use xlink:href="#row"/>
-        <use xlink:href="#row" transform="translate(740) scale(-1, 1)"/>
+        <use xlink:href="#row" transform="translate(850) scale(-1, 1)"/>
     </g>
 </svg>
