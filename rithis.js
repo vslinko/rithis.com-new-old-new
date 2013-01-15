@@ -22,14 +22,20 @@ app.configure(function () {
 });
 
 
+var portfolio = [
+    {name: "happynewgift.ru", logo: "/images/portfolio/happynewgift.ru/logo.png"},
+    {name: "aviator.pegast.su", logo: "/images/portfolio/aviator.pegast.su/logo.png"},
+    {name: "skveez.com", logo: "/images/portfolio/skveez.com/logo.png"}
+];
+
 app.get('/', function (req, res) {
-    res.render('index', function (err, html) {
+    res.render('index', {portfolio: portfolio}, function (err, html) {
         res.send(err ? 500 : html);
     });
 });
 
 app.get('/portfolio/', function (req, res) {
-    res.render('portfolio', function (err, html) {
+    res.render('portfolio', {portfolio: portfolio}, function (err, html) {
         res.send(err ? 500 : html);
     });
 });
