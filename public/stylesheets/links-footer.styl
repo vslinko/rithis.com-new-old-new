@@ -1,0 +1,57 @@
+.links.links-footer
+    responsive width 940px 720px 300px
+    responsive margin, 50px auto 60px, \
+                       same, \
+                       15px auto 20px
+    padding 0
+    list-style none
+    clearfix()
+		
+    .links-item
+        float left
+        margin-right 30px
+        responsive font-size 21px same 16px
+
+
+        &.links-item-freelansim, &.links-item-card, &.links-item-github
+            .links-item-link:before
+                responsive margin-right 10px same 0
+
+                @media (max-width: 767px)
+                    hide-icon()
+
+        // item-specific styles
+        &.links-item-portfolio .links-item-link:before
+            left 5px
+            icon-portfolio()
+
+        &.links-item-vacancies .links-item-link:before
+            right 3px
+            icon-vacancies()
+
+        &.links-item-freelansim
+            responsive width auto 35% 40%
+            
+            text-align left
+	
+            .links-item-link:before
+                icon-freelansim()
+
+        &.links-item-card
+            responsive width auto 40% 35%
+            text-align left
+
+            .links-item-link:before
+                icon-card()
+
+        &.links-item-github
+            width auto
+            text-align left
+
+            .links-item-link:before
+                icon-github()
+        
+        &.links-item-copyrights
+            width 472px
+            margin-right 0
+            text-align right

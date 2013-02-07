@@ -29,7 +29,18 @@ html(xmlns="http://www.w3.org/1999/xhtml", xmlns:xsi="http://www.w3.org/2001/XML
             .content
                 block content
                 hr.content-divider
-
-        .footer
-            mixin contacts("contacts-footer", true)
-            p.copyrights © 2012—2013 Студия Ритхис
+        
+        block footer
+            .footer
+               mixin contacts("contacts-footer", true)
+               ul.links.links-footer
+                   li.links-item.links-item-freelansim
+                       a.links-item-link(href="#") Фрилансим
+                   li.links-item.links-item-card
+                       a.links-item-link(href="#") Реквизитка
+                   li.links-item.links-item-github
+                       a.links-item-link(href="#") Github
+                   li.links-item.links-item-copyrights
+                       © 2012—2013 Студия Ритхис
+                    
+                 
