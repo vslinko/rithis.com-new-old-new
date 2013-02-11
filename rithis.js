@@ -40,5 +40,11 @@ app.get('/portfolio/', function (req, res) {
     });
 });
 
+app.get('/jobs/', function (req, res) {
+    res.render('jobs', function (err, html) {
+        res.send(err ? 500 : html);
+    });
+});
+
 
 app.listen(process.env.VCAP_APP_PORT || 3000);
