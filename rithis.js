@@ -46,5 +46,11 @@ app.get('/jobs/', function (req, res) {
     });
 });
 
+app.get('/vacancy/', function (req, res) {
+    res.render('vacancy', function (err, html) {
+        res.send(err ? 500 : html);
+    });
+});
+
 
 app.listen(process.env.VCAP_APP_PORT || 3000);

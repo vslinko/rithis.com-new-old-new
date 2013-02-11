@@ -4,4 +4,63 @@
     
     .content-divider
         responsive image "beige-to-silver-wave" same "beige-to-silver-wave-phone"
+        clear both
         wave()
+
+    .content-wrapper
+        overflow hidden
+        position relative
+        responsive width 880px 600px 300px
+        responsive padding, 100px 0 0 60px, \
+                            70px 0 0 60px, \
+                            40px 0 0 15px
+        responsive margin, 0 auto 200px, \
+                           same, \
+                           0 auto 60px
+
+        h2.page-title
+            responsive font-size 49px 49px 35px
+            responsive line-height 42px 42px 35px
+            margin-bottom 80px
+            responsive width 800px 660px 300px
+            responsive text-align left left center
+
+        .bigtext
+            responsive font-size 36px 36px 24px
+            responsive line-height 42px 42px 32px
+            margin 35px 0    
+
+        .vacancy-description
+            responsive width 580px 460px 300px
+            float left
+
+        .vacancy-doc
+            responsive display block block none
+            width 140px
+            float right
+
+        .hot-links-item-link-back
+            background #93625E
+            display inline-block
+            font-size 12px
+            padding 5px 10px
+            font-style italic
+            color #ffffff
+            position absolute
+            top 12px
+            left 15px
+
+        .hot-links-item-link-back:after
+            content ''
+            display block
+            position absolute
+            top 0px
+            left -26px
+            width 0
+            height 0
+            border-color transparent #93625E transparent transparent
+            border-style solid
+            border-width 13px
+
+
+
