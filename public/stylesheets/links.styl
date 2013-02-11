@@ -13,7 +13,7 @@
 
         // first line
         &.links-item-portfolio, &.links-item-vacancies
-            width 50%
+            responsive width 50% 50% 100%
             responsive margin-bottom 70px 60px 25px
 
             .links-item-link
@@ -68,3 +68,12 @@
 
             .links-item-link:before
                 icon-github()
+
+        // item-vacancies styles
+        &.links-item-vacancies.php, &.links-item-vacancies.manager
+            .links-item-link
+                responsive font-size 35px 28px 24px
+
+                span
+                    white-space nowrap
+                    display block     
