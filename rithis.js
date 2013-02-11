@@ -58,5 +58,11 @@ app.get('/case/', function (req, res) {
     });
 });
 
+app.get('/about/', function (req, res) {
+    res.render('about', function (err, html) {
+        res.send(err ? 500 : html);
+    });
+});
+
 
 app.listen(process.env.VCAP_APP_PORT || 3000);
