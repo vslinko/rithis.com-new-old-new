@@ -1,0 +1,39 @@
+extends layout
+
+block title
+    title Студия Ритхис — Портфолио / Социальная сеть и магазин
+
+prepend content
+    ul.hot-links
+        li.hot-links-item.hot-links-item-right
+            a.hot-links-item-link(href="/jobs/") Вакансии
+
+block content
+    .content-wrapper
+        a.hot-links-item-link-back(href="/portfolio/") Портфолио
+
+        .case-info
+            h1.case-title Социальная сеть и магазин
+            .task-info
+                a.sitelink(href="/#/") www.skveez.com
+                p Система поиска и бронирования авиабилетов для агентств и частных лиц
+            .task-description
+                h2.task-description-title Задача:
+                .task-description-start
+                    {
+                .task-description-txt
+                    Реализовать бекофис и систему поиска/бронирования на основе стороннего движка
+                .task-description-end
+                    }
+
+        .case-description
+            
+            p 
+                img(src="/images/portfolio/skveez.com/case_pic1.png")
+            p
+                Здесь читают классику и последние новинки, собирают собственные коллекции и подписываются на любимых авторов, публикуют рецензии и оценивают отзывы других.
+            p
+                img(src="/images/portfolio/skveez.com/case_pic2.png")
+            p
+                У каждого члена клуба есть своя библиотечка, откуда он в любое время берет книги и читает на том устройстве, которое сейчас у него под рукой. В будущем владельцы файлов станут сами загружать их в большое хранилище.    
+        
