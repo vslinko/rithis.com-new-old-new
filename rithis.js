@@ -40,5 +40,29 @@ app.get('/portfolio/', function (req, res) {
     });
 });
 
+app.get('/jobs/', function (req, res) {
+    res.render('jobs', function (err, html) {
+        res.send(err ? 500 : html);
+    });
+});
+
+app.get('/vacancy/', function (req, res) {
+    res.render('vacancy', function (err, html) {
+        res.send(err ? 500 : html);
+    });
+});
+
+app.get('/case/', function (req, res) {
+    res.render('case', function (err, html) {
+        res.send(err ? 500 : html);
+    });
+});
+
+app.get('/about/', function (req, res) {
+    res.render('about', function (err, html) {
+        res.send(err ? 500 : html);
+    });
+});
+
 
 app.listen(process.env.PORT || 3000);

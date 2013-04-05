@@ -9,6 +9,7 @@ block header
         mixin contacts("contacts-header contacts-index")
         hr.header-divider
 
+
 prepend body
     .slogan
         a#slogan.slogan-badge
@@ -31,14 +32,19 @@ block content
 
         hr.portfolio-divider
 
-    ul.links
-        li.links-item.links-item-portfolio
+    .links
+        .links-item.links-item-portfolio
             a.links-item-link(href="/portfolio/") Портфолио
-        li.links-item.links-item-vacancies
-            a.links-item-link(href="#") Вакансии
-        li.links-item.links-item-freelansim
+        .links-item.links-item-vacancies
+            a.links-item-link(href="/jobs/") Вакансии
+        .links-item.links-item-freelansim
             a.links-item-link(href="#") Фрилансим
-        li.links-item.links-item-card
+        .links-item.links-item-card
             a.links-item-link(href="#") Реквизитка
-        li.links-item.links-item-github
+        .links-item.links-item-github
             a.links-item-link(href="#") Github
+            
+block footer
+    .footer.footer-index
+        mixin contacts("contacts-footer contacts-index", true)
+        p.copyrights © 2012—2013 Студия Ритхис
