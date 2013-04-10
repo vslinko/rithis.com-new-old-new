@@ -1,0 +1,20 @@
+.portfolio .portfolio-divider
+  responsive width 850px 740px auto
+  responsive height 47px 36px 45px
+
+  // reset hr style
+  border none
+
+  responsive image "portfolio-divider" "portfolio-divider-tablet" \
+    "portfolio-divider"
+  svg "portfolio-divider"
+
+  // fix svg height
+  background-repeat no-repeat
+
+  phone background-position center
+
+  // wider than screen on phone
+  @media (max-width: 767px)
+    .backgroundsize.svg &
+      background-size 815px 45px

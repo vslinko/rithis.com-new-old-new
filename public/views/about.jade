@@ -1,0 +1,24 @@
+extends layout
+
+block title
+    title Студия Ритхис — Главное то, что мы умеем
+
+prepend content
+    ul.hot-links
+        li.hot-links-item.hot-links-item-left
+            a.hot-links-item-link(href="#!/jobs/") Вакансии
+        li.hot-links-item.hot-links-item-right
+            a.hot-links-item-link(href="#!/portfolio/") Портфолио
+
+block content
+    .portfolio
+        h1.portfolio-title 
+            span
+                Главное то, что мы умеем
+        
+        .expertise-content-wrapper
+
+            .expertise-list(data-ng-repeat="expertise in expertises")
+                h2.expertise-title(ng-bind-html-unsafe="expertise.title")
+                ul
+                  li(data-ng-repeat="item in expertise.list") {{ item }}
