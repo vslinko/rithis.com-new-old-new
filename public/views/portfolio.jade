@@ -1,0 +1,22 @@
+extends layout
+
+block title
+  title Студия Ритхис — Портфолио
+
+prepend content
+  ul.hot-links
+    li.hot-links-item.hot-links-item-right
+      a.hot-links-item-link(href="#!/jobs") Вакансии
+
+block content
+  .portfolio(data-portfolio)
+    h1.portfolio-title Портфолио
+
+    .portfolio-scroll
+      ul.portfolio-scroll-list
+        li.portfolio-scroll-list-item(data-ng-repeat="project in portfolio")
+          a.portfolio-scroll-list-item-link(href="{{ getProjectUrl(project) }}")
+            img.portfolio-scroll-list-item-link-image(data-ng-src="{{ project.logo }}", alt="{{ project.name }}")
+          h3.portfolio-scroll-list-item-title
+            a.portfolio-scroll-list-item-title-link(href="{{ getProjectUrl(project) }}") {{ project.name }}           
+

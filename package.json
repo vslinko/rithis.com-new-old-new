@@ -1,25 +1,37 @@
 {
-    "name": "rithis.com",
-    "version": "0.0.1",
-    "description": "rithis.com website",
-    "keywords": ["website", "express"],
-    "homepage": "http://rithis.com",
-    "author": {
-        "name": "Vyacheslav Slinko",
-        "email": "vyacheslav.slinko@gmail.com"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/rithis/rithis.com.git"
-    },
-    "scripts": {
-        "start": "node rithis.js"
-    },
-    "dependencies": {
-        "express": "3.0.x",
-        "jade": "0.28.x",
-        "stylus": "0.32.x",
-        "nib": "0.9.x"
-    },
-    "private": true
+  "name": "rithis.com"
+, "version": "0.0.1"
+, "description": "rithis.com website"
+, "keywords": ["website"]
+, "homepage": "http://rithis.com"
+, "author": {
+    "name": "Vyacheslav Slinko"
+  , "email": "vyacheslav.slinko@gmail.com"
+  }
+, "repository": {
+    "type": "git"
+  , "url": "git://github.com/rithis/rithis.com.git"
+  }
+, "scripts": {
+    "start": "coffee rithis.coffee"
+  , "test": "grunt test"
+  }
+, "dependencies": {
+    "coffee-script": "~1.6"
+  , "symfio": "~0.4"
+  }
+, "devDependencies": {
+    "grunt": "~0.4"
+  , "grunt-contrib-clean": "~0.4"
+  , "grunt-simple-mocha": "~0.3"
+  , "grunt-coffee-coverage": "~0.1"
+  , "grunt-coffeelint": "~0.0"
+  }
+, "engines": {
+    "node": "~0.8"
+  , "npm": "~1.2"
+  , "coffee-script": "~1.6"
+  , "grunt-cli": "~0.4"
+  }
+, "private": true
 }

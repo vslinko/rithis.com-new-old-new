@@ -1,4 +1,22 @@
+# ignore IDE settings
+.c9revisions
+.components
+.idea
+.settings
+
+# ignore vendors
 node_modules
+public/components
+public/uploads
+
+# ignore generated files
+public/component.json
 npm-debug.log
-public/icons/icons.afm
-public/stylesheets/main.css
+
+# Ignore config
+config.json
+
+# ignore compiled assets
+*.html
+*.js
+*.css
